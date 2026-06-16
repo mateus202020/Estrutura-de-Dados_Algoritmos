@@ -33,4 +33,16 @@ export default class DoublyLinkedList{
         this.tail = node;
         this.size += 1;
     }
+
+    toArray = () => {
+        let current = this.head;
+        let vect = [];
+
+        while(current){
+            vect.push(current.value);
+            current = current.next;
+        }
+
+        return vect;
+    }
 }

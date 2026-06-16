@@ -8,5 +8,6 @@ list.addAtEnd(86);
 list.addAtEnd(-2);
 list.addAtEnd(16);
 list.addAtEnd(23);
+list.addAtEnd(-4);
 
-console.log(list);
+console.log(list.toArray());
