@@ -55,7 +55,7 @@ export default class DoublyLinkedList{
 
         node.next = this.head;
         this.head.prev = node;
-        this.head = node;
+        this.head = node;x
         this.size += 1;
     }
 

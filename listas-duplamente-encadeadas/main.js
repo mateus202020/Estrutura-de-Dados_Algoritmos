@@ -27,3 +27,5 @@ console.log(`Tamanho da lista: ${list.getSize()}`);
 list.AddAStart(23);
 console.log(list.toArray());
 console.log(`Tamanho da lista: ${list.getSize()}`);
+
+
