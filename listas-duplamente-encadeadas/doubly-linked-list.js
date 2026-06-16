@@ -44,6 +44,21 @@ export default class DoublyLinkedList{
         this.size += 1;
     }
 
+    AddAStart = (elem) => {
+        const node = new Node(elem);
+        if(this.isEmpty()){
+            this.head = node;
+            this.tail = node;
+            this.size += 1;
+            return;
+        }
+
+        node.next = this.head;
+        this.head.prev = node;
+        this.head = node;
+        this.size += 1;
+    }
+
     toArray = () => {
         let current = this.head;
         let vect = [];
