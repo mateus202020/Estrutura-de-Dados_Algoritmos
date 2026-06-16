@@ -13,4 +13,24 @@ export default class DoublyLinkedList{
         this.size = 0;
     }
 
+    isEmpty(){
+        if(this.head == null)
+            return true;
+        return false;
+    }
+
+    addAtEnd = (elem) => {
+        const node = new Node(elem);
+        if(this.isEmpty()){
+            this.head = node;
+            this.tail = node;
+            this.size += 1;
+            return;
+        }
+
+        node.prev = this.tail;
+        this.tail.next = node;
+        this.tail = node;
+        this.size += 1;
+    }
 }
