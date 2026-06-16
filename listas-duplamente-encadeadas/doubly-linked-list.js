@@ -13,6 +13,16 @@ export default class DoublyLinkedList{
         this.size = 0;
     }
 
+    clear = () => {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
+    }
+
+    getSize = () => {
+        return this.size;
+    }
+
     isEmpty(){
         if(this.head == null)
             return true;

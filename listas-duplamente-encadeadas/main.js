@@ -11,3 +11,11 @@ list.addAtEnd(23);
 list.addAtEnd(-4);
 
 console.log(list.toArray());
+console.log(`Tamanho da lista: ${list.getSize()}`);
+
+
+console.log("Clar list...")
+list.clear();
+
+console.log(list.toArray());
+console.log(`Tamanho da lista: ${list.getSize()}`);
