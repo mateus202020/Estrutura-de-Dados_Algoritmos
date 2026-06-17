@@ -155,7 +155,23 @@ export default class DoublyLinkedList{
     };
 
         
-        
+    reverse = () => {
+        const nodeHead = this.head;
+        const nodetail = this.tail;
+
+        this.head = nodetail;
+        this.tail = nodeHead;
+
+        let current = nodeHead;
+        let aux = null;
+
+        while(current){
+            aux = current.next;
+            current.next = current.prev;
+            current.prev = aux;
+            current = aux;
+        }
+    }
 
     toArray = () => {
         let current = this.head;
