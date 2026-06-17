@@ -123,6 +123,20 @@ export default class DoublyLinkedList{
         return node;
     }
 
+    removeTail = () => {
+        const node = this.tail;
+        this.tail = this.tail.prev;
+
+        if(this.tail == null){
+            this.head = null;
+        } else {
+            this.tail.next = null;
+        }
+
+        this.size -= 1;
+        return node;
+    }
+
     toArray = () => {
         let current = this.head;
         let vect = [];

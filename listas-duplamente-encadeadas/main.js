@@ -33,7 +33,7 @@ console.log(list.toArray());
 
 console.log(list.toArray());
 
-console.log(`Remover primeiro elemento...`);
-list.removeHead();
+console.log(`Remover último elemento...`);
+list.removeTail();
 console.log(list.toArray());
 console.log(`Qtd elementos: ${list.getSize()}`);
