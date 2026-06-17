@@ -19,10 +19,6 @@ list.clear();
 
 console.log(list.toArray());
 console.log(`Tamanho da lista: ${list.getSize()}`);
-*/
-
-console.log(list.toArray());
-console.log(`Tamanho da lista: ${list.getSize()}`);
 
 list.AddAStart(23);
 console.log(list.toArray());
@@ -33,3 +29,11 @@ console.log(list.toArray());
 
 list.addAtPosition(7, 100);
 console.log(list.toArray());
+*/
+
+console.log(list.toArray());
+
+console.log(`Remover primeiro elemento...`);
+list.removeHead();
+console.log(list.toArray());
+console.log(`Qtd elementos: ${list.getSize()}`);

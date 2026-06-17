@@ -97,6 +97,32 @@ export default class DoublyLinkedList{
         return current;
     }
 
+    indexOf = (elem) => {
+        let current = this.head;
+        let index = 0;
+        while(current){
+            if(current.value === elem)
+                return index;
+            current = current.next;
+            index++
+        }
+        return -1;
+    };
+
+    removeHead = () => {
+        const node = this.head;
+        this.head = this.head.next;
+
+        if(this.head == null){
+            this.tail = null;
+        } else {
+            this.head.prev = null;
+        }
+
+        this.size -= 1;
+        return node;
+    }
+
     toArray = () => {
         let current = this.head;
         let vect = [];
