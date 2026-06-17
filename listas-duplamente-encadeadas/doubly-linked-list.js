@@ -59,6 +59,25 @@ export default class DoublyLinkedList{
         this.size += 1;
     }
 
+    get = (index) => {
+        let current = this.getNode(index);
+        if(current)
+            return current.value;
+        return null;
+    }
+
+    getNode = (index) => {
+        if(index < 0 || index > this.getSize())
+            return null;
+        let current = this.head;
+        let currentIndex = 0;
+        while(current != null && currentIndex < index){
+            current = current.next;
+            currentIndex++;
+        }
+        return current;
+    }
+
     toArray = () => {
         let current = this.head;
         let vect = [];
