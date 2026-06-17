@@ -55,7 +55,7 @@ export default class DoublyLinkedList{
 
         node.next = this.head;
         this.head.prev = node;
-        this.head = node;x
+        this.head = node;
         this.size += 1;
     }
 
@@ -64,6 +64,25 @@ export default class DoublyLinkedList{
         if(current)
             return current.value;
         return null;
+    }
+
+    addAtPosition = (index, elem) => {
+        if(index == 0){
+            this.AddAStart(elem);
+            return;
+        }
+        if(!this.get(index) || index == this.getSize()){
+            this.addAtEnd(elem);
+            return;
+        }
+
+        const node = new Node(elem);
+        let current = this.getNode(index - 1);
+        current.next.prev = node;
+        node.next = current.next;
+        node.prev = current;
+        current.next = node;
+        this.size += 1;
     }
 
     getNode = (index) => {
