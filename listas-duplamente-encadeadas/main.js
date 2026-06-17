@@ -29,11 +29,21 @@ console.log(list.toArray());
 
 list.addAtPosition(7, 100);
 console.log(list.toArray());
-*/
-
-console.log(list.toArray());
 
 console.log(`Remover último elemento...`);
 list.removeTail();
 console.log(list.toArray());
 console.log(`Qtd elementos: ${list.getSize()}`);
+*/
+
+console.log(list.toArray());
+
+let index = 2;
+const item = list.removeAtPosition(index);
+if(item){
+    console.log(`Removendo elemento ${item} da posição ${index}`);
+}else{
+    console.log(`Error ao remover da posição ${index}`);
+}
+
+console.log(list.toArray());

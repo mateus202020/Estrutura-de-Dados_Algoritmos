@@ -137,6 +137,26 @@ export default class DoublyLinkedList{
         return node;
     }
 
+    removeAtPosition = (index) => {
+        if(this.isEmpty() || !this.get(index)){
+            return null;
+        }
+        if(index === 0)
+            return this.removeHead().value;
+        if(index == this.getSize() -1)
+            return this.removeTail().value;
+
+        const current = this.getNode(index);
+        current.prev.next = current.next;
+        current.next.prev = current.prev;
+        this.size -= 1;
+        return current.value;
+
+    };
+
+        
+        
+
     toArray = () => {
         let current = this.head;
         let vect = [];
